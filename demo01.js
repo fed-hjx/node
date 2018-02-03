@@ -1,7 +1,15 @@
-const fs = require('fs');
+var fs = require("fs");
 
-fs.readFile('./files/index.html',(er,file)=>{
-    console.log(er,file)
-})
+// 异步读取
+fs.readFile('./files/read.txt', function (err, data) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log("异步读取: " + data.toString());
+});
 
-console.log('done')
+// 同步读取
+var data = fs.readFileSync('./files/read.txt');
+console.log("同步读取: " + data.toString());
+
+console.log("程序执行完毕。");
