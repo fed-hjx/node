@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="http://hq.sinajs.cn/list=sh601138"></script>
+<script>
+    var elements=hq_str_sh601138.split(",");
+    document.title = elements[3] + ' ' + ((elements[3] - elements[2]) / elements[3] * 100).toFixed(2) + '%';
+
+    if(elements[3] > 18){
+        alert()
+    }else{
+        setTimeout(() => location.reload(), 1000);
+    }
+</script>
+</html>
